@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление пациента</title>
+</head>
+<body>
+<h2>Добавление пациента</h2>
+<br>
+<form action="#" th:action="@{/patient/created}" th:object="${patient}" method="post">
+    <label for="surname">Фамилия</label>
+    <input type="text" th:field="*{surname}" id="surname" placeholder="Фамилия" required>
+    <br><br>
+    <label for="name">Имя</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Имя" required>
+    <br><br>
+    <label for="patronymic">Отчество</label>
+    <input type="text" th:field="*{patronymic}" id="patronymic" placeholder="Отчество" required>
+    <br><br>
+    <label for="dateOfBirth">Дата рождения</label>
+    <input type="date" th:field="*{dateOfBirth}" id="dateOfBirth" placeholder="Дата рождения" required>
+    <br><br>
+    <p>
+    <label for="historyOfReceipt">История приема</label>
+    <input type="text" th:field="*{historyOfReceipt}" id="historyOfReceipt" placeholder="История приема" required>
+    <br><br>
+    </p>
+    <input type="submit" value="Добавить">
+</form>
+</body>
+</html>

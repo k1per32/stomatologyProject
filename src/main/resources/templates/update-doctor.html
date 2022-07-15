@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменение доктора</title>
+</head>
+<body>
+<h2>Изменение доктора</h2>
+<br>
+<form action="#" th:action="@{/doctor/updated/{id}(id=${doctor.id})}" th:object="${doctor}" method="post">
+    <label for="surname">Фамилия</label>
+    <input type="text" th:field="*{surname}" id="surname" placeholder="Фамилия" required>
+    <br><br>
+    <label for="name">Имя</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Имя" required>
+    <br><br>
+    <label for="patronymic">Отчество</label>
+    <input type="text" th:field="*{patronymic}" id="patronymic" placeholder="Отчество" required>
+    <br><br>
+    <input type="submit" value="Изменить">
+</form>
+</body>
+</html>
