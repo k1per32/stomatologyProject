@@ -6,8 +6,11 @@
 </head>
 <body>
 <h1>Расписание</h1>
-
-
+<table>
+    <tr th:each="doctor : ${doctor}">
+        <td th:text="${doctor.name}"></td>
+    </tr>
+</table>
 <input type="button" value="Добавить нового доктора" onclick="window.location.href='/doctor/add'">
 <input type="button" value="Добавить нового пациента" onclick="window.location.href='/patient/add'">
 <br><br>

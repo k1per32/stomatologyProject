@@ -1,12 +1,14 @@
 package com.yuriy.demotest2.entity;
 
 import lombok.Data;
+import lombok.ToString;
 
 
 import javax.persistence.*;
 
 @Data
 @Entity
+@ToString
 @Table(name = "doctors")
 public class Doctor {
     @Id

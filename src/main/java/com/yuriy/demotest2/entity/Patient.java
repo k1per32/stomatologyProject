@@ -3,12 +3,14 @@ package com.yuriy.demotest2.entity;
 
 import lombok.Data;
 
+import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 
 @Data
 @Entity
+@ToString
 @Table(name = "patients")
 public class Patient {
 
@@ -43,4 +45,5 @@ public class Patient {
         this.historyOfReceipt = historyOfReceipt;
         this.dateOfBirth = dateOfBirth;
     }
+
 }
